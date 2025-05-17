@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control de Inventario PEPS - Comercial Andina S.A.</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .excel-container {
+      border-collapse: collapse;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .excel-header {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+      font-weight: bold;
+    }
+    .excel-title {
+      background-color: #4472C4;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    .excel-subtitle {
+      background-color: #D9E1F2;
+      text-align: center;
+      font-weight: bold;
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+    .cell {
+      padding: 6px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    .header-cell {
+      background-color: #D9E1F2;
+      font-weight: bold;
+    }
+    .date-cell {
+      background-color: #E9ECEF;
+    }
+    .text-left {
+      text-align: left;
+    }
+    .numeric {
+      text-align: right;
+    }
+    .total {
+      background-color: #FFFF00;
+      font-weight: bold;
+    }
+    .company-info {
+      margin-bottom: 20px;
+    }
+    .company-info table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .company-info td {
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+    .company-info .label {
+      font-weight: bold;
+      background-color: #E9ECEF;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="company-info">
+    <h2>FORMATO 13.1: "REGISTRO DE INVENTARIO PERMANENTE VALORIZADO - DETALLE DEL INVENTARIO VALORIZADO"</h2>
+    <table>
+      <tr>
+        <td class="label">PERÍODO:</td>
+        <td>MARZO 2025</td>
+      </tr>
+      <tr>
+        <td class="label">RUC:</td>
+        <td>20897845991</td>
+      </tr>
+      <tr>
+        <td class="label">APELLIDOS Y NOMBRES, DENOMINACIÓN O RAZÓN SOCIAL:</td>
+        <td>Comercial Andina S.A.</td>
+      </tr>
+      <tr>
+        <td class="label">ESTABLECIMIENTO:</td>
+        <td>Av. José Leal N° 1542, Lince</td>
+      </tr>
+      <tr>
+        <td class="label">CÓDIGO DE LA EXISTENCIA:</td>
+        <td>A311-2025</td>
+      </tr>
+      <tr>
+        <td class="label">TIPO DE EXISTENCIA:</td>
+        <td>Sacos de azúcar</td>
+      </tr>
+      <tr>
+        <td class="label">MÉTODO DE VALUACIÓN:</td>
+        <td>Primeras Entradas, Primeras Salidas (PEPS)</td>
+      </tr>
+    </table>
+  </div>
+
+  <table class="excel-container">
+    <tr>
+      <td colspan="2" class="excel-title"></td>
+      <td colspan="3" class="excel-title">ENTRADAS</td>
+      <td colspan="3" class="excel-title">SALIDAS</td>
+      <td colspan="3" class="excel-title">SALDO FINAL</td>
+    </tr>
+    <tr>
+      <td class="excel-subtitle">FECHA</td>
+      <td class="excel-subtitle">DETALLE</td>
+      <td class="excel-subtitle">CANTIDAD</td>
+      <td class="excel-subtitle">COSTO UNIT.</td>
+      <td class="excel-subtitle">COSTO TOTAL</td>
+      <td class="excel-subtitle">CANTIDAD</td>
+      <td class="excel-subtitle">COSTO UNIT.</td>
+      <td class="excel-subtitle">COSTO TOTAL</td>
+      <td class="excel-subtitle">CANTIDAD</td>
+      <td class="excel-subtitle">COSTO UNIT.</td>
+      <td class="excel-subtitle">COSTO TOTAL</td>
+    </tr>
+
+    <!-- Saldo Inicial -->
+    <tr>
+      <td class="cell date-cell">02/03/2025</td>
+      <td class="cell text-left">Saldo Inicial</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">80</td>
+      <td class="cell numeric">128.00</td>
+      <td class="cell numeric">10,240.00</td>
+    </tr>
+
+    <!-- Compra 09/03 -->
+    <tr>
+      <td class="cell date-cell">09/03/2025</td>
+      <td class="cell text-left">Compra según factura N° 001-1352</td>
+      <td class="cell numeric">40</td>
+      <td class="cell numeric">129.00</td>
+      <td class="cell numeric">5,160.00</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">80</td>
+      <td class="cell numeric">128.00</td>
+      <td class="cell numeric">10,240.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">40</td>
+      <td class="cell numeric">129.00</td>
+      <td class="cell numeric">5,160.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">120</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">15,400.00</td>
+    </tr>
+
+    <!-- Venta 13/03 -->
+    <tr>
+      <td class="cell date-cell">13/03/2025</td>
+      <td class="cell text-left">Venta según factura N° 001-461</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">80</td>
+      <td class="cell numeric">128.00</td>
+      <td class="cell numeric">10,240.00</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">20</td>
+      <td class="cell numeric">129.00</td>
+      <td class="cell numeric">2,580.00</td>
+      <td class="cell numeric">20</td>
+      <td class="cell numeric">129.00</td>
+      <td class="cell numeric">2,580.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">100</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">12,820.00</td>
+      <td class="cell numeric total">20</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">2,580.00</td>
+    </tr>
+
+    <!-- Compra 18/03 -->
+    <tr>
+      <td class="cell date-cell">18/03/2025</td>
+      <td class="cell text-left">Compra según factura N° 001-2365</td>
+      <td class="cell numeric">60</td>
+      <td class="cell numeric">130.00</td>
+      <td class="cell numeric">7,800.00</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">20</td>
+      <td class="cell numeric">129.00</td>
+      <td class="cell numeric">2,580.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">60</td>
+      <td class="cell numeric">130.00</td>
+      <td class="cell numeric">7,800.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">80</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">10,380.00</td>
+    </tr>
+
+    <!-- Compra 26/03 -->
+    <tr>
+      <td class="cell date-cell">26/03/2025</td>
+      <td class="cell text-left">Compra según factura N° 001-1356</td>
+      <td class="cell numeric">40</td>
+      <td class="cell numeric">131.00</td>
+      <td class="cell numeric">5,240.00</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">20</td>
+      <td class="cell numeric">129.00</td>
+      <td class="cell numeric">2,580.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">60</td>
+      <td class="cell numeric">130.00</td>
+      <td class="cell numeric">7,800.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">40</td>
+      <td class="cell numeric">131.00</td>
+      <td class="cell numeric">5,240.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">120</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">15,620.00</td>
+    </tr>
+
+    <!-- Venta 31/03 -->
+    <tr>
+      <td class="cell date-cell">31/03/2025</td>
+      <td class="cell text-left">Venta según factura N° 001-464</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">20</td>
+      <td class="cell numeric">129.00</td>
+      <td class="cell numeric">2,580.00</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">60</td>
+      <td class="cell numeric">130.00</td>
+      <td class="cell numeric">7,800.00</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric">30</td>
+      <td class="cell numeric">131.00</td>
+      <td class="cell numeric">3,930.00</td>
+      <td class="cell numeric">10</td>
+      <td class="cell numeric">131.00</td>
+      <td class="cell numeric">1,310.00</td>
+    </tr>
+    <tr>
+      <td class="cell date-cell"></td>
+      <td class="cell text-left"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">110</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">14,310.00</td>
+      <td class="cell numeric total">10</td>
+      <td class="cell numeric"></td>
+      <td class="cell numeric total">1,310.00</td>
+    </tr>
+
+    <!-- Totales -->
+    <tr>
+      <td colspan="2" class="cell header-cell">TOTALES</td>
+      <td class="cell numeric header-cell">140</td>
+      <td class="cell header-cell"></td>
+      <td class="cell numeric header-cell">18,200.00</td>
+      <td class="cell numeric header-cell">210</td>
+      <td class="cell header-cell"></td>
+      <td class="cell numeric header-cell">27,130.00</td>
+      <td class="cell numeric header-cell">10</td>
+      <td class="cell header-cell"></td>
+      <td class="cell numeric header-cell">1,310.00</td>
+    </tr>
+  </table>
+</body>
+</html>
